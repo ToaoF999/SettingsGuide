@@ -1,13 +1,18 @@
-Normally, Cura will create cross sections of all the triangles in your mesh. These line segments are stitched together to form loops. Any loops that are not closed will be discarded.
+En focntionnement standard, Cura crée des coupes transversales de tous les triangles de votre maillage. 
+Ces segments sont réunis ensemble pour former des boucles. 
+Toutes les boucles qui ne sont pas fermées seront supprimées.
 
-This setting controls what will be done with these unclosed loop. If set to "Normal", they are discarded. If set to "Surface", all of the cross sections are printed as outlines. If set to "Both", the closed outlines are printed normally but the unclosed ones are printed separately as extra walls.
+Ce paramètre contrôle ce qui sera fait avec ces boucles non fermées. 
+Défini sur "Normal", les boucles sont supprimés. 
+Défini sur "Surface", toutes les coupes transversales sont imprimées sous forme de contours. 
+Définie sur "Les deux", les contours fermés sont imprimés normalement mais ceux non fermés sont imprimés séparément en tant que murs supplémentaires.
 
-![Normal mode leaves out the single unclosed surface on the right](../images/magic_mesh_surface_mode_normal.png)
-![Surface mode only prints the surfaces without treating them as closed volumes](../images/magic_mesh_surface_mode_surface.png)
-![Printing both the volumes and the extra unclosed surface on the right](../images/magic_mesh_surface_mode_both.png)
+![Le mode normal laisse de côté la seule surface non fermée sur la droite](../images/magic_mesh_surface_mode_normal.png)
+![Le mode Surface imprime uniquement les surfaces sans les traiter comme des volumes fermés](../images/magic_mesh_surface_mode_surface.png)
+!["Les deux" imprime des volumes et de la surface supplémentaire non fermés sur la droite](../images/magic_mesh_surface_mode_both.png)
 
-The extra surfaces that get printed will only include the vertical surfaces as single lines. There is no filling technique for horizontal surfaces, since the surfaces are not closed polygons. They cannot be filled since there is no inside. There can be no tops, bottoms, infill or supports. Only single lines.
+Les surfaces supplémentaires imprimées incluront uniquement les surfaces verticales sous forme de lignes simples. Il n'y a pas de technique de remplissage pour les surfaces horizontales, car les surfaces ne sont pas des polygones fermés. Ils ne peuvent pas être remplis car il n'y a pas à l'intérieur. Il ne peut y avoir ni dessus, ni dessous, ni remplissage, ni support. Seulement des lignes simples.
 
-The extra surfaces will be printed as if they are outer walls, so they will be affected by the outer wall printing speed, line width, and so on.
+Les surfaces supplémentaires seront imprimées comme s'il s'agissait de murs extérieurs, elles seront donc affectées par la vitesse d'impression du mur extérieur, la largeur de ligne, etc.
 
-*If printing both the normal volumes and the extra surfaces, keep in mind that the volumes will be printed with the outer wall completely inside the volume. The extra surfaces are printed with the line centred on the surface, with half of the line's width on either side. If an extra surface is aligned to the surface of a closed volume, as in the pictures above, the surface will be shifted by half a line width. After all, the extra surface has no inside to move towards.*
+*Si vous imprimez à la fois les volumes normaux et les surfaces supplémentaires, gardez à l'esprit que les volumes seront imprimés avec la paroi extérieure complètement à l'intérieur du volume. Les surfaces supplémentaires sont imprimées avec la ligne centrée sur la surface, avec la moitié de la largeur de la ligne de chaque côté. Si une surface supplémentaire est alignée sur la surface d'un volume fermé, comme dans les images ci-dessus, la surface sera décalée d'une demi-largeur de ligne. Après tout, la surface supplémentaire n'a aucun intérieur vers lequel se diriger. *
