@@ -1,4 +1,4 @@
-En focntionnement standard, Cura crée des coupes transversales de tous les triangles de votre maillage. 
+En fonctionnement standard, Cura crée des coupes transversales de tous les triangles de votre maillage. 
 Ces segments sont réunis ensemble pour former des boucles. 
 Toutes les boucles qui ne sont pas fermées seront supprimées.
 
